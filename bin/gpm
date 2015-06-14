@@ -1,0 +1,65 @@
+#!/usr/bin/env node
+
+// Dependencies
+var Gpm = require("../lib")
+  , Logger = require("bug-killer")
+  , CLP = require("clp")
+  , Package = require("../package")
+  , FlatColors = require("flat-colors")
+  , Deffy = require("deffy")
+  , Fs = require("fs-plus")
+  ;
+
+// Logger configs
+Logger.config.progress = {
+    color: FlatColors([0, 255, 100])
+  , text: "progress"
+  , level: 3
+};
+
+Logger.config.done = {
+    color: FlatColors([0, 255, 0])
+  , text: "done"
+  , level: 3
+};
+
+// Parse the command line arguments
+var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url.", "name|git")
+  , urlTypeOpt = new CLP.Option(["t", "url-type"], "The git url type to use (e.g. `https`, `ssh`).", "type")
+  , destOpt = new CLP.Option(["d", "destination"], "Where to install the package.", "path")
+  , parser = new CLP({
+        name: Package.name
+      , version: Package.version
+      , exe: Package.name
+      , examples: [
+            "gpm -i git-stats # Installs git-stats and its dependencies from git repositories."
+          , "gpm -i git@github.com:IonicaBizau/git-stats.git # Does the same, but providing the git url"
+        ]
+      , docs_url: Package.homepage
+      , process: true
+    }, [
+        inputOpt
+      , urlTypeOpt
+      , destOpt
+    ])
+  ;
+
+if (!inputOpt.is_provided) {
+    return console.log(parser.displayHelp());
+}
+
+if (destOpt.value) {
+    destOpt.value = Fs.normalize(destOpt.value);
+}
+
+var pack = new Gpm(inputOpt.value, {
+    url_type: urlTypeOpt.value
+  , dest: Deffy(destOpt.value, undefined, true)
+});
+
+pack.install(function (err) {
+    if (err) { return Logger.log(err, "error"); }
+    Logger.log("Done.", "done");
+}, function (m) {
+    Logger.log(m, "progress");
+});
