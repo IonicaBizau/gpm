@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "npm + git = gpm",
   "main": "lib/index.js",
+  "bin": {
+      "gpm": "./bin/gpm"
+  },
   "directories": {
     "example": "example"
   },
