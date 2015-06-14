@@ -1,0 +1,27 @@
+{
+  "name": "gpm",
+  "version": "1.0.0",
+  "description": "npm + git = gpm",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/node-npm.git"
+  },
+  "keywords": [
+    "git",
+    "npm",
+    "modules"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "KINDLY",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/node-npm/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/node-npm"
+}
