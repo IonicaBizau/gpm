@@ -4,7 +4,7 @@
   "description": "npm + git = gpm",
   "main": "lib/index.js",
   "bin": {
-      "gpm": "./bin/gpm"
+    "gpm": "./bin/gpm"
   },
   "directories": {
     "example": "example"
@@ -26,5 +26,24 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-npm/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-npm"
+  "homepage": "https://github.com/IonicaBizau/node-npm",
+  "dependencies": {
+    "bug-killer": "^3.0.0",
+    "clp": "^3.0.0",
+    "deffy": "^2.0.0",
+    "exec-limiter": "^1.0.0",
+    "flat-colors": "^3.0.0",
+    "fs-plus": "^2.8.1",
+    "git-url-parse": "^3.0.0",
+    "gry": "^2.1.0",
+    "mkdirp": "^0.5.1",
+    "oargv": "^1.2.0",
+    "one-by-one": "^1.0.0",
+    "package-json": "^1.2.0",
+    "r-json": "^1.0.0",
+    "same-time": "^2.0.0",
+    "tmp": "^0.0.26",
+    "ul": "^5.0.0"
+  },
+  "devDependencies": {}
 }
