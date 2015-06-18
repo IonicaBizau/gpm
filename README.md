@@ -34,6 +34,15 @@ $ npm i -g gpm
 
 Then, run `gpm --help` and see what the cli tool can do.
 
+For example, if you want to install [`git-stats`](https://github.com/IonicaBizau/git-stats) and its
+dependencies and subdependencies (recursively), do:
+
+```sh
+$ gpm -i git-stats
+```
+
+This will create the `git-stats` repository in the current working directory.
+
 ## Example
 
 Here is an example how to use this package as library.
