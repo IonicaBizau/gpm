@@ -7,7 +7,8 @@ var Gpm = require("../lib")
   , Package = require("../package")
   , FlatColors = require("flat-colors")
   , Deffy = require("deffy")
-  , Fs = require("fs-plus")
+  , Ul = require("ul")
+  , Path = require("path")
   ;
 
 // Logger configs
@@ -49,7 +50,7 @@ if (!inputOpt.is_provided) {
 }
 
 if (destOpt.value) {
-    destOpt.value = Fs.normalize(destOpt.value);
+    destOpt.value = Path.resolve(destOpt.value.replace("~", Ul.home()));
 }
 
 var pack = new Gpm(inputOpt.value, {
