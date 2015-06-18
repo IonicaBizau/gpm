@@ -15,7 +15,7 @@
 
 # `$ gpm` [![Donate now][donate-now]][paypal-donations]
 
-npm + git = gpm–Install NodeJS projects and dependencies from git repositories.
+npm + git = gpm - Install NPM packages and dependencies from git repositories.
 
 ## Installation
 
