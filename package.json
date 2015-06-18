@@ -1,7 +1,7 @@
 {
   "name": "gpm",
   "version": "1.0.0",
-  "description": "npm + git = gpm",
+  "description": "npm + git = gpm–Install NodeJS projects and dependencies from git repositories.",
   "main": "lib/index.js",
   "bin": {
     "gpm": "./bin/gpm"
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:IonicaBizau/node-npm.git"
+    "url": "git@github.com:IonicaBizau/node-gpm.git"
   },
   "keywords": [
     "git",
@@ -24,9 +24,9 @@
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "KINDLY",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/node-npm/issues"
+    "url": "https://github.com/IonicaBizau/node-gpm/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-npm",
+  "homepage": "https://github.com/IonicaBizau/node-gpm",
   "dependencies": {
     "bug-killer": "^3.0.0",
     "clp": "^3.0.0",
