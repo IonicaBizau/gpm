@@ -44,5 +44,8 @@
     "tmp": "^0.0.26",
     "ul": "^5.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "blah": {
+      "h_img": "http://i.imgur.com/lU98JRC.png"
+  }
 }

@@ -13,6 +13,8 @@
 <!-- * * * Thanks! * * *                                                    -->
 <!---------------------------------------------------------------------------->
 
+![gpm](http://i.imgur.com/lU98JRC.png)
+
 # `$ gpm` [![Donate now][donate-now]][paypal-donations]
 
 npm + git = gpm - Install NPM packages and dependencies from git repositories.
