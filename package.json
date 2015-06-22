@@ -22,6 +22,9 @@
     "modules"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "contributors": [
+    "Nihey Takizawa <nihey.takizawa@gmail.com> (http://nihey.com.br)"
+  ],
   "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-gpm/issues"
