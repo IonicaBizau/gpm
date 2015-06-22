@@ -9,6 +9,7 @@ var Gpm = require("../lib")
   , Deffy = require("deffy")
   , Ul = require("ul")
   , Path = require("path")
+  , Fs = require("fs")
   ;
 
 // Logger configs
@@ -51,6 +52,17 @@ if (!inputOpt.is_provided) {
 
 if (destOpt.value) {
     destOpt.value = Path.resolve(destOpt.value.replace("~", Ul.home()));
+}
+
+if (inputOpt.value === ".") {
+    // Load and parse the package.json file
+    var packageJsonPath = Path.join(process.cwd(), "package.json")
+      , manifest = JSON.parse(Fs.readFileSync(packageJsonPath));
+
+    // Merge all dependencies on a single Array
+    var dependencies = Object.keys(manifest.dependencies)
+      , devDependencies = Object.keys(manifest.devDependencies);
+    inputOpt.value = dependencies.concat(devDependencies);
 }
 
 var pack = new Gpm(inputOpt.value, {
