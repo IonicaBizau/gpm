@@ -55,16 +55,8 @@ if (destOpt.value) {
 }
 
 if (inputOpt.value === ".") {
-    // Load and parse the package.json file
-    var packageJsonPath = Path.join(process.cwd(), "package.json")
-      , manifest = ReadJson(packageJsonPath)
-      ;
-
-    // Merge all dependencies on a single Array
-    var dependencies = Object.keys(manifest.dependencies)
-      , devDependencies = Object.keys(manifest.devDependencies)
-      ;
-    inputOpt.value = dependencies.concat(devDependencies);
+    // Load a package.json file in the current directory
+    inputOpt.value = ReadJson(Path.join(process.cwd(), "package.json"));
 }
 
 var pack = new Gpm(inputOpt.value, {
