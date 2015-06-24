@@ -57,6 +57,7 @@ if (destOpt.value) {
 if (inputOpt.value === ".") {
     // Load a package.json file in the current directory
     inputOpt.value = ReadJson(Path.join(process.cwd(), "package.json"));
+    destOpt.value = destOpt.value || Path.join(process.cwd(), "node_modules");
 }
 
 var pack = new Gpm(inputOpt.value, {
