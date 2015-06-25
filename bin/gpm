@@ -50,14 +50,14 @@ if (!inputOpt.is_provided) {
     return console.log(parser.displayHelp());
 }
 
-if (destOpt.value) {
-    destOpt.value = Path.resolve(destOpt.value.replace("~", Ul.home()));
-}
-
 if (inputOpt.value === ".") {
     // Load a package.json file in the current directory
     inputOpt.value = ReadJson(Path.join(process.cwd(), "package.json"));
-    destOpt.value = destOpt.value || Path.join(process.cwd(), "node_modules");
+    destOpt.value = Deffy(destOpt.value, "node_modules");
+}
+
+if (destOpt.value) {
+    destOpt.value = Path.resolve(destOpt.value.replace("~", Ul.home()));
 }
 
 var pack = new Gpm(inputOpt.value, {
