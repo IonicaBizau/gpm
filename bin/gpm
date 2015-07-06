@@ -35,6 +35,7 @@ var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url."
       , examples: [
             "gpm -i git-stats # Installs git-stats and its dependencies from git repositories."
           , "gpm -i git@github.com:IonicaBizau/git-stats.git # Does the same, but providing the git url"
+          , "gpm -i . # install the local package dependencies"
         ]
       , docs_url: Package.homepage
       , process: true
