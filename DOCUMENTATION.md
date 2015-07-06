@@ -1,11 +1,11 @@
 ## Documentation
 You can see below the API reference of this module.
 
-### `Gpm(name, options)`
+### `Gpm(package, options)`
 Creates a new `Gpm` instance.
 
 #### Params
-- **String** `name`: The git url or the npm package name.
+- **String|Object** `package`: The git url, the npm package name or a package.json-like object.
 - **Object** `options`: An object containing the following fields:
 
 #### Return
@@ -43,7 +43,20 @@ Executes a command in the repository.
 - **String** `command`: The command to execute.
 - **Function** `callback`: The callback function.
 
+### `getDependencies()`
+Returns the requested dependencies for installation
+
+#### Return
+- **Array** A list with the dependencies whose installation was required
+
 ### `install(callback, progress)`
+Installs the input package(s).
+
+#### Params
+- **Function** `callback`: The callback function.
+- **Function** `progress`: The progress function.
+
+### `installCurrent(callback, progress)`
 Installs the current package dependencies.
 
 #### Params
