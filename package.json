@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/IonicaBizau/node-gpm",
   "dependencies": {
-    "bug-killer": "^3.0.0",
+    "bug-killer": "^4.0.0",
     "clp": "^3.0.0",
     "deffy": "^2.0.0",
     "exec-limiter": "^2.0.0",
@@ -44,11 +44,11 @@
     "package-json": "^1.2.0",
     "r-json": "^1.0.0",
     "same-time": "^2.0.0",
-    "tmp": "^0.0.26",
+    "tmp": "0.0.26",
     "ul": "^5.0.0"
   },
   "devDependencies": {},
   "blah": {
-      "h_img": "http://i.imgur.com/lU98JRC.png"
+    "h_img": "http://i.imgur.com/lU98JRC.png"
   }
 }
