@@ -53,7 +53,7 @@ if (!inputOpt.is_provided) {
 
 // Load a package.json file in the current directory
 if (inputOpt.value === ".") {
-    if (IsThere("package.json")) {
+    if (!IsThere("package.json")) {
         return Logger.log(new Error("Cannot find a package.json in this folder."));
     }
     inputOpt.value = ReadJson("package.json");
