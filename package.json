@@ -46,7 +46,8 @@
     "same-time": "^2.0.0",
     "tmp": "0.0.26",
     "ul": "^5.0.0",
-    "abs": "^1.0.0"
+    "abs": "^1.0.0",
+    "is-there": "^4.0.0"
   },
   "devDependencies": {},
   "blah": {

@@ -9,6 +9,7 @@ var Gpm = require("../lib")
   , Deffy = require("deffy")
   , Abs = require("abs")
   , ReadJson = require("r-json")
+  , IsThere = require("is-there")
   ;
 
 // Logger configs
@@ -52,6 +53,9 @@ if (!inputOpt.is_provided) {
 
 // Load a package.json file in the current directory
 if (inputOpt.value === ".") {
+    if (IsThere("package.json")) {
+        return Logger.log(new Error("Cannot find a package.json in this folder."));
+    }
     inputOpt.value = ReadJson("package.json");
     destOpt.value = Deffy(destOpt.value, "node_modules");
 }
