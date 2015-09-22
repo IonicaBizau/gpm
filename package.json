@@ -36,7 +36,7 @@
     "deffy": "^2.0.0",
     "exec-limiter": "^2.0.0",
     "flat-colors": "^3.0.0",
-    "git-url-parse": "^3.0.0",
+    "git-url-parse": "^4.0.0",
     "gry": "^4.0.0",
     "mkdirp": "^0.5.1",
     "oargv": "^2.0.0",
