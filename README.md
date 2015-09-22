@@ -51,7 +51,7 @@ Here is an example how to use this package as library.
 // Dependencies
 var Gpm = require("gpm");
 
-// Install git-stats and its Node modules from git
+// Install uls and its Node modules from git
 var pack = new Gpm("git@github.com:IonicaBizau/node-ul.git", {
 
     // Use https
