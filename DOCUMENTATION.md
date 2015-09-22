@@ -7,6 +7,11 @@ Creates a new `Gpm` instance.
 #### Params
 - **String|Object** `package`: The git url, the npm package name or a package.json-like object.
 - **Object** `options`: An object containing the following fields:
+ - `url_type` (String): A value interpreted by `git-url-parse` (default: `"ssh"`).
+ - `dest` (String): The destination path (defaults to `process.cwd()`).
+ - `auto` (Boolean): If `true`, a new directory will be created in the destination directory (default: `true`).
+ - `is_dev` (Boolean): If `true`, the dev dependencies will be installed as well (default: `false`).
+ - `depth` (Number): The dependency tree depth (the other dependencies being installed via `npm`). Default is `Infinity`.
 
 #### Return
 - **Gpm** The `Gpm` instance.
