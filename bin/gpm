@@ -27,8 +27,9 @@ Logger.config.done = {
 
 // Parse the command line arguments
 var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url.", "name|git")
-  , urlTypeOpt = new CLP.Option(["t", "url-type"], "The git url type to use (e.g. `https`, `ssh`).", "type")
-  , destOpt = new CLP.Option(["d", "destination"], "Where to install the package.", "path")
+  , urlTypeOpt = new CLP.Option(["u", "url-type"], "The git url type to use (e.g. `https`, `ssh`).", "type")
+  , destOpt = new CLP.Option(["t", "destination"], "Where to install the package.", "path")
+  , depthOpt = new CLP.Option(["d", "depth"], "The depth value. Default is Infinity.", "depth")
   , parser = new CLP({
         name: Package.name
       , version: Package.version
@@ -44,6 +45,7 @@ var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url."
         inputOpt
       , urlTypeOpt
       , destOpt
+      , depthOpt
     ])
   ;
 
@@ -67,6 +69,7 @@ if (destOpt.value) {
 var pack = new Gpm(inputOpt.value, {
     url_type: urlTypeOpt.value
   , dest: Deffy(destOpt.value, undefined, true)
+  , depth: deptOpt.value || Infinity
 });
 
 pack.install(function (err) {

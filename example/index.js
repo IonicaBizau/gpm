@@ -2,7 +2,7 @@
 var Gpm = require("../lib");
 
 // Install git-stats and its Node modules from git
-var pack = new Gpm("git@github.com:IonicaBizau/git-stats.git", {
+var pack = new Gpm("git@github.com:IonicaBizau/node-ul.git", {
 
     // Use https
     url_type: "https"
@@ -11,7 +11,11 @@ var pack = new Gpm("git@github.com:IonicaBizau/git-stats.git", {
   , dest: __dirname
 
     // Clone git repositories for the 3 level depth in dependency tree
-  , depth: 3
+  , depth: 2
+    // ul <- typpy
+    //    <- deffy <- *typpy
+    //
+    // *–this will not be a git repository
 });
 
 // Start the install
