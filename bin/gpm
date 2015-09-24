@@ -69,7 +69,7 @@ if (destOpt.value) {
 var pack = new Gpm(inputOpt.value, {
     url_type: urlTypeOpt.value
   , dest: Deffy(destOpt.value, undefined, true)
-  , depth: deptOpt.value || Infinity
+  , depth: depthOpt.value || Infinity
 });
 
 pack.install(function (err) {
