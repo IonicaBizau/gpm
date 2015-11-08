@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:IonicaBizau/node-gpm.git"
+    "url": "git@github.com:IonicaBizau/gpm.git"
   },
   "keywords": [
     "git",
@@ -27,9 +27,9 @@
   ],
   "license": "KINDLY",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/node-gpm/issues"
+    "url": "https://github.com/IonicaBizau/gpm/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-gpm",
+  "homepage": "https://github.com/IonicaBizau/gpm",
   "dependencies": {
     "bug-killer": "^4.0.0",
     "clp": "^3.0.0",
@@ -51,6 +51,20 @@
   },
   "devDependencies": {},
   "blah": {
-    "h_img": "http://i.imgur.com/lU98JRC.png"
+    "h_img": "http://i.imgur.com/lU98JRC.png",
+    "installation": [
+      {
+        "p": "For example, if you want to install [`git-stats`](https://github.com/IonicaBizau/git-stats) and its dependencies and subdependencies (recursively), do:"
+      },
+      {
+        "code": {
+          "language": "sh",
+          "content": "$ gpm -i git-stats"
+        }
+      },
+      {
+        "p": "This will create the `git-stats` repository in the current working directory."
+      }
+    ]
   }
 }
