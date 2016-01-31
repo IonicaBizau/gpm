@@ -1,17 +1,18 @@
 ## Documentation
 You can see below the API reference of this module.
 
-### `Gpm(package, options)`
+### `Gpm(packageObj, options)`
 Creates a new `Gpm` instance.
 
 #### Params
-- **String|Object** `package`: The git url, the npm package name or a package.json-like object.
+- **String|Object** `packageObj`: The git url, the npm package name or a package.json-like object.
 - **Object** `options`: An object containing the following fields:
  - `url_type` (String): A value interpreted by `git-url-parse` (default: `"ssh"`).
  - `dest` (String): The destination path (defaults to `process.cwd()`).
  - `auto` (Boolean): If `true`, a new directory will be created in the destination directory (default: `true`).
  - `is_dev` (Boolean): If `true`, the dev dependencies will be installed as well (default: `false`).
  - `depth` (Number): The dependency tree depth (the other dependencies being installed via `npm`). Default is `Infinity`.
+ - `version` (String): The dependency version.
 
 #### Return
 - **Gpm** The `Gpm` instance.
