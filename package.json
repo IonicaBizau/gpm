@@ -1,6 +1,6 @@
 {
   "name": "gpm",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "npm + git = gpm - Install NPM packages and dependencies from git repositories.",
   "main": "lib/index.js",
   "bin": {
