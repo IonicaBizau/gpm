@@ -27,7 +27,7 @@ Logger.config.done = {
 
 // Parse the command line arguments
 var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url.", "name|git")
-  , urlTypeOpt = new CLP.Option(["u", "url-type"], "The git url type to use (e.g. `https`, `ssh`).", "type")
+  , urlTypeOpt = new CLP.Option(["u", "url-type"], "The git url type to use (e.g. `https`, `ssh`).", "type", "ssh")
   , destOpt = new CLP.Option(["t", "destination"], "Where to install the package.", "path")
   , depthOpt = new CLP.Option(["d", "depth"], "The depth value. Default is Infinity.", "depth")
   , parser = new CLP({
