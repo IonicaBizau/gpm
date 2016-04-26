@@ -1,30 +1,34 @@
+
 [![gpm](http://i.imgur.com/lU98JRC.png)](#)
 
 # `$ gpm` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/gpm.svg)](https://www.npmjs.com/package/gpm) [![Downloads](https://img.shields.io/npm/dt/gpm.svg)](https://www.npmjs.com/package/gpm) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > npm + git = gpm - Install NPM packages and dependencies from git repositories.
 
-## Installation
+## :cloud: Installation
 
 You can install the package globally and use it as command line tool:
+
 
 ```sh
 $ npm i -g gpm
 ```
 
+
 Then, run `gpm --help` and see what the CLI tool can do.
 
-```sh
+
+```
 $ gpm --help
 Usage: gpm [options]
 
 Options:
-  -i, --input <name|git>    The NPM package name or git url.              
+  -i, --input <name|git>    The NPM package name or git url.
   -u, --url-type <type>     The git url type to use (e.g. `https`, `ssh`).
-  -t, --destination <path>  Where to install the package.                 
-  -d, --depth <depth>       The depth value. Default is Infinity.         
-  -h, --help                Displays this help.                           
-  -v, --version             Displays version information.                 
+  -t, --destination <path>  Where to install the package.
+  -d, --depth <depth>       The depth value. Default is Infinity.
+  -h, --help                Displays this help.
+  -v, --version             Displays version information.
 
 Examples:
   gpm -i git-stats # Installs git-stats and its dependencies from git repositories.
@@ -34,6 +38,7 @@ Examples:
 Documentation can be found at https://github.com/IonicaBizau/gpm
 ```
 
+
 For example, if you want to install [`git-stats`](https://github.com/IonicaBizau/git-stats) and its dependencies and subdependencies (recursively), do:
 
 ```sh
@@ -42,13 +47,17 @@ $ gpm -i git-stats
 
 This will create the `git-stats` repository in the current working directory.
 
-## Example
+
+## :clipboard: Example
+
 
 Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
 
 ```sh
 $ npm i --save gpm
 ```
+
+
 
 ```js
 // Dependencies
@@ -79,17 +88,15 @@ pack.install(function (err, data) {
 });
 ```
 
-## Documentation
+## :memo: Documentation
 
 For full API reference, see the [DOCUMENTATION.md][docs] file.
 
-## How to contribute
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
 
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
