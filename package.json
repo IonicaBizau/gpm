@@ -1,6 +1,6 @@
 {
   "name": "gpm",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "npm + git = gpm - Install NPM packages and dependencies from git repositories.",
   "main": "lib/index.js",
   "bin": {
@@ -68,5 +68,16 @@
         "p": "This will create the `git-stats` repository in the current working directory."
       }
     ]
-  }
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
