@@ -1,6 +1,6 @@
 {
   "name": "gpm",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "npm + git = gpm - Install NPM packages and dependencies from git repositories.",
   "main": "lib/index.js",
   "bin": {
@@ -21,7 +21,7 @@
     "npm",
     "modules"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "contributors": [
     "Nihey Takizawa <nihey.takizawa@gmail.com> (http://nihey.com.br)"
   ],
@@ -73,12 +73,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
