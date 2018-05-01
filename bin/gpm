@@ -30,6 +30,7 @@ var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url."
   , urlTypeOpt = new CLP.Option(["u", "url-type"], "The git url type to use (e.g. `https`, `ssh`).", "type", "ssh")
   , destOpt = new CLP.Option(["t", "destination"], "Where to install the package.", "path")
   , depthOpt = new CLP.Option(["d", "depth"], "The depth value. Default is Infinity.", "depth")
+  , devOpt = new CLP.Option(["v", "is_dev"], "true to install dev dependenvies.", "dev")
   , parser = new CLP({
         name: Package.name
       , version: Package.version
@@ -46,6 +47,7 @@ var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url."
       , urlTypeOpt
       , destOpt
       , depthOpt
+	  , devOpt
     ])
   ;
 
