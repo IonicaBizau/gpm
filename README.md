@@ -33,12 +33,13 @@ $ gpm --help
 Usage: gpm [options]
 
 Options:
-  -i, --input <name|git>    The NPM package name or git url.
-  -u, --url-type <type>     The git url type to use (e.g. `https`, `ssh`).
-  -t, --destination <path>  Where to install the package.
-  -d, --depth <depth>       The depth value. Default is Infinity.
-  -h, --help                Displays this help.
-  -v, --version             Displays version information.
+  -i, --input <name|git>                       The NPM package name or git url.              
+  -u, --url-type <type>                        The git url type to use (e.g. `https`, `ssh`).
+  -t, --destination <path>                     Where to install the package.                 
+  -n, --node module destination <folder name>  Name of the  node_module folder.              
+  -d, --depth <depth>                          The depth value. Default is Infinity.         
+  -h, --help                                   Displays this help.                           
+  -v, --version                                Displays version information.                 
 
 Examples:
   gpm -i git-stats # Installs git-stats and its dependencies from git repositories.
