@@ -29,6 +29,7 @@ Logger.config.done = {
 var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url.", "name|git")
   , urlTypeOpt = new CLP.Option(["u", "url-type"], "The git url type to use (e.g. `https`, `ssh`).", "type", "ssh")
   , destOpt = new CLP.Option(["t", "destination"], "Where to install the package.", "path")
+  , nm_destOpt = new CLP.Option(["n", "node module destination"], "Name of the  node_module folder.", "folder name", "node_modules")
   , depthOpt = new CLP.Option(["d", "depth"], "The depth value. Default is Infinity.", "depth")
   , parser = new CLP({
         name: Package.name
@@ -45,6 +46,7 @@ var inputOpt = new CLP.Option(["i", "input"], "The NPM package name or git url."
         inputOpt
       , urlTypeOpt
       , destOpt
+      , nm_destOpt
       , depthOpt
     ])
   ;
@@ -69,6 +71,7 @@ if (destOpt.value) {
 var pack = new Gpm(inputOpt.value, {
     url_type: urlTypeOpt.value
   , dest: Deffy(destOpt.value, undefined, true)
+  , nm_dest: Deffy(nm_destOpt.value, undefined, true)
   , depth: depthOpt.value || Infinity
 });
 
