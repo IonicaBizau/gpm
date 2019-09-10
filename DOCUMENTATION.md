@@ -6,11 +6,11 @@ You can see below the API reference of this module.
 Creates a new `Gpm` instance.
 
 #### Params
-
 - **String|Object** `packageObj`: The git url, the npm package name or a package.json-like object.
 - **Object** `options`: An object containing the following fields:
  - `url_type` (String): A value interpreted by `git-url-parse` (default: `"ssh"`).
  - `dest` (String): The destination path (defaults to `process.cwd()`).
+ - `nm_dest` (String): The node module folder name (defaults to 'node_modules').
  - `auto` (Boolean): If `true`, a new directory will be created in the destination directory (default: `true`).
  - `is_dev` (Boolean): If `true`, the dev dependencies will be installed as well (default: `false`).
  - `depth` (Number): The dependency tree depth (the other dependencies being installed via `npm`). Default is `Infinity`.
@@ -23,14 +23,12 @@ Creates a new `Gpm` instance.
 Gets the module `package.json` object.
 
 #### Params
-
 - **Function** `callback`: The callback function.
 
 ### `getGitUrl(callback)`
 Gets the git url of the package.
 
 #### Params
-
 - **Function** `callback`: The callback function.
 
 ### `getPath()`
@@ -43,7 +41,6 @@ Gets the path to the repository.
 Runs a script from `scripts` (`package.json`).
 
 #### Params
-
 - **String** `task`: What npm task to run.
 - **Function** `callback`: The callback function.
 
@@ -51,7 +48,6 @@ Runs a script from `scripts` (`package.json`).
 Executes a command in the repository.
 
 #### Params
-
 - **String** `command`: The command to execute.
 - **Function** `callback`: The callback function.
 
@@ -65,7 +61,6 @@ Returns the requested dependencies for installation
 Installs the input package(s).
 
 #### Params
-
 - **Function** `callback`: The callback function.
 - **Function** `progress`: The progress function.
 
@@ -73,7 +68,6 @@ Installs the input package(s).
 Installs the current package dependencies.
 
 #### Params
-
 - **Function** `callback`: The callback function.
 - **Function** `progress`: The progress function.
 
