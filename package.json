@@ -38,7 +38,7 @@
     "exec-limiter": "^3.2.1",
     "flat-colors": "^3.0.0",
     "git-source": "^1.0.0",
-    "gry": "^4.0.0",
+    "gry": "^6.0.0",
     "is-semver": "^1.0.0",
     "is-there": "^4.0.0",
     "iterate-object": "^1.3.1",
