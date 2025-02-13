@@ -1,6 +1,6 @@
 {
   "name": "gpm",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "npm + git = gpm - Install NPM packages and dependencies from git repositories.",
   "main": "lib/index.js",
   "bin": {
@@ -80,6 +80,8 @@
     "menu/",
     "cli.js",
     "index.js",
+    "index.d.ts",
+    "package-lock.json",
     "bloggify.js",
     "bloggify.json",
     "bloggify/"
